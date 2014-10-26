@@ -296,17 +296,18 @@ body {
     width: 100%;
     background-color: #dbdcdd;
     border-radius: 10px;
-    padding-bottom: 10px;
+    margin: 30px 0 0 0;
+    padding: 10px 0;
 }
 
-#container p {
+#header p {
     margin: 0;
     text-align: center;
     padding: 10px;
 }
 
-#container .logo {
-    width: 40%;
+#header .logo {
+    width: 80%;
 }
 
 .content {
@@ -314,10 +315,10 @@ body {
 }
 
 .words {
-    margin: 0 10px;
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
+    margin: 0 10px;
 }
 
 .language-row.foreign {
