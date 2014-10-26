@@ -286,28 +286,54 @@ textarea {
     }
 }
 
+/* Local styles */
+
+body {
+    padding: 10px;
+}
+
 #container {
-    margin: 10px 0 0 10px;
-    border: 2px solid silver;
-    width: 288px;
-    height: 150px;
-    display: table;
+    width: 100%;
+    background-color: #dbdcdd;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+#container p {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+#container .logo {
+    width: 40%;
 }
 
 .content {
     display: none;
 }
 
-.language-row {
-    display: table-row;
+.words {
+    margin: 0 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.language-row.foreign {
+    border-top: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+}
+
+.language-row.own {
+    border-bottom: 2px solid #808080;
 }
 
 .language {
     text-align: center;
-    font-size: 28px;
-    height: 40px;
-    display: table-cell;
-    vertical-align: middle;
+    font-size: 35px;
+    height: 45px;
+    padding: 15px 0;
 }
 
 #foreign {
