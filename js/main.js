@@ -1,7 +1,24 @@
-fc = $('#foreign_content').text();
-oc = $('#own_content').text();
-fc_words = fc.trim().split(" ");
-oc_words = oc.trim().split(" ");
+"use strict";
+
+/**
+ * Splits a text into words by separating paragrapgs by "|" (pipe) and sentenced by " " (space)
+ */
+function splitText(t) {
+    return t.split("|")
+        .map(function (el) {
+            return el.split(" ");
+        })
+        .reduce(function (words, sentence) {
+            words.push("");
+            for (var i = 0; i < sentence.length; i++) {
+                words.push(sentence[i]);
+            }
+            return words;
+        });
+}
+
+var fc_words = splitText($('#foreign_content').text());
+var oc_words = splitText($('#own_content').text());
 
 var interValId;
 
@@ -10,8 +27,6 @@ function showNextWord() {
     var nextOcWord = oc_words.shift();
     $('#foreign').html(nextFcWord);
     $('#own').html(nextOcWord);
-
-    console.log("showNextWord");
     if (fc_words.length == 0) {
         window.clearInterval(interValId);
     }
